@@ -28,7 +28,7 @@ app.post('/send-email', async (req, res) => {
     res.status(200).send({ message: 'Email poslan!' });
   } catch (error) {
     console.error(error);
-    res.status(500).send({ message: 'Greška pri slanju emaila.' });
+    res.status(500).send({ message: error });
   }
 });
 
