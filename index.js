@@ -6,6 +6,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Email servis je aktivan');
+});
 app.post('/send-email', async (req, res) => {
   const { to, subject, text } = req.body;
 
