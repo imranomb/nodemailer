@@ -11,7 +11,9 @@ app.post('/send-email', async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // ili smtp konfiguracija
+       host: 'smtp.gmail.com',
+       port: 587,
+       secure: false,
       auth: {
         user: 'Imran2018omerbasic@gmail.com',
         pass: 'oiih divn vslz ityq'
